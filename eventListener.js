@@ -1,11 +1,15 @@
-const imput = document.querySelector('.imput');
-const divImput = document.querySelector('.div__imput')
+// На сторінці є дві кнопки. - переадресовується на інший сайт (за раніше введеним посиланням).
+// Реалізувати перевірку на http / https. Якщо протокол не вказаний - додаємо
 
-const showMessage = () => {
-    divImput.classList.add('div__imput__yes')
+
+const aPerevirkaFirst = document.querySelector('.first__link')
+const aPerevirkaSecond = document.querySelector('.second__link')
+
+console.log(aPerevirkaFirst.href);
+console.log(aPerevirkaSecond);
+
+if (aPerevirkaFirst.href.includes('http') || aPerevirkaFirst.href.includes('https')) {
+    console.log(true);
+} else {
+    aPerevirkaFirst.href('http');
 }
-const removeMessage = () => {
-    divImput.classList.remove('div__imput__yes')
-}
-imput.addEventListener('mouseover', showMessage)
-imput.addEventListener('mouseout', removeMessage)
